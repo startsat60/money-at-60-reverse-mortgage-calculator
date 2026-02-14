@@ -43,7 +43,7 @@ final class M60_RM_Calculator_Plugin {
       'min_loan' => 50000,
       'max_loan' => 2000000,
       'max_lvr' => 0.50,
-      'notify_email' => get_option('admin_email'),
+      'notify_email' => $_ENV['MONEYAT60_CONTACT_EMAIL'] ?: get_option('admin_email'),
       'enable_leads' => '1',
     ], $atts, self::SHORTCODE);
 
