@@ -240,7 +240,7 @@ final class M60_RM_Calculator_Plugin {
       'email' => sanitize_email($_POST['email'] ?? ''),
       'phone' => sanitize_text_field($_POST['phone'] ?? ''),
       'consent' => (string)($_POST['consent'] ?? '') === '1',
-      'notify_email' => sanitize_email($_POST['notifyEmail'] ?? get_option('admin_email')),
+      'notify_email' => sanitize_email($_POST['notifyEmail'] ?? $_ENV['MONEYAT60_CONTACT_EMAIL'] ?: get_option('admin_email')),
       'page_url' => esc_url_raw($_POST['pageUrl'] ?? ''),
       'user_ip' => sanitize_text_field($_SERVER['REMOTE_ADDR'] ?? ''),
       'user_agent' => sanitize_text_field($_SERVER['HTTP_USER_AGENT'] ?? ''),
