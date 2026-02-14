@@ -1,0 +1,12 @@
+{
+  "name": "startsat60/money-at-60-reverse-mortgage-calculator",
+  "description": "Money at 60 Reverse Mortgage Calculator",
+  "keywords": ["wordpress", "plugin"],
+  "homepage": "",
+  "license": "GPL-2.0+",
+  "type": "wordpress-plugin",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.2"
+    }
+}
