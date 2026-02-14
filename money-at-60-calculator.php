@@ -62,19 +62,19 @@ final class M60_RM_Calculator_Plugin {
     ];
 
     $html = '<div class="m60-rm-calculator" id="'.esc_attr($uid).'" data-config="'.esc_attr(wp_json_encode($config)).'">
-      <div class="m60-rm-card">
+      <div class="m60-rm-card-excluded-for-mas-styles">
         <div class="m60-rm-steps">
           <div class="m60-rm-step is-active" data-step="1">
             <h3 class="m60-rm-h">Calculate your home wealth</h3>
 
             <label class="m60-rm-label">What is the postcode of the property? <span class="m60-rm-req">*</span></label>
-            <input class="m60-rm-input" type="text" inputmode="numeric" maxlength="4" name="postcode" placeholder="e.g. 3000" />
+            <input class="form-control" type="text" inputmode="numeric" maxlength="4" name="postcode" placeholder="e.g. 3000" />
 
             <label class="m60-rm-label">What is the estimated value? <span class="m60-rm-req">*</span></label>
-            <input class="m60-rm-input" type="text" inputmode="numeric" name="property_value" placeholder="e.g. 900,000" />
+            <input class="form-control" type="text" inputmode="numeric" name="property_value" placeholder="e.g. 900,000" />
 
             <div class="m60-rm-actions">
-              <button class="m60-rm-btn" data-action="next">Next</button>
+              <button class="mas-btn" data-action="next">Next</button>
             </div>
 
             <div class="m60-rm-error" role="alert" aria-live="polite"></div>
@@ -84,11 +84,11 @@ final class M60_RM_Calculator_Plugin {
             <h3 class="m60-rm-h">A few more details</h3>
 
             <label class="m60-rm-label">Age of youngest borrower <span class="m60-rm-req">*</span></label>
-            <input class="m60-rm-input" type="text" inputmode="numeric" maxlength="3" name="age" placeholder="e.g. 67" />
+            <input class="form-control" type="text" inputmode="numeric" maxlength="3" name="age" placeholder="e.g. 67" />
 
             <div class="m60-rm-actions">
-              <button class="m60-rm-btn m60-rm-btn--ghost" data-action="back">Back</button>
-              <button class="m60-rm-btn" data-action="calculate">Calculate</button>
+              <button class="mas-btn" data-action="back">Back</button>
+              <button class="mas-btn" data-action="calculate">Calculate</button>
             </div>
 
             <div class="m60-rm-error" role="alert" aria-live="polite"></div>
@@ -111,13 +111,13 @@ final class M60_RM_Calculator_Plugin {
               <h4 class="m60-rm-h4">Want to discuss your options?</h4>
 
               <label class="m60-rm-label">Full name <span class="m60-rm-req">*</span></label>
-              <input class="m60-rm-input" type="text" name="full_name" />
+              <input class="form-control" type="text" name="full_name" />
 
               <label class="m60-rm-label">Email <span class="m60-rm-req">*</span></label>
-              <input class="m60-rm-input" type="email" name="email" />
+              <input class="form-control" type="email" name="email" />
 
               <label class="m60-rm-label">Phone <span class="m60-rm-req">*</span></label>
-              <input class="m60-rm-input" type="tel" name="phone" />
+              <input class="form-control" type="tel" name="phone" />
 
               <label class="m60-rm-check">
                 <input type="checkbox" name="consent" />
@@ -125,8 +125,8 @@ final class M60_RM_Calculator_Plugin {
               </label>
 
               <div class="m60-rm-actions">
-                <button class="m60-rm-btn m60-rm-btn--ghost" data-action="backToInputs">Edit inputs</button>
-                <button class="m60-rm-btn" data-action="submitLead">Request a call</button>
+                <button class="mas-btn" data-action="backToInputs">Edit inputs</button>
+                <button class="mas-btn" data-action="submitLead">Request a call</button>
               </div>
 
               <div class="m60-rm-error" role="alert" aria-live="polite"></div>
@@ -134,7 +134,7 @@ final class M60_RM_Calculator_Plugin {
             </div>
 
             <div class="m60-rm-actions">
-              <button class="m60-rm-btn m60-rm-btn--ghost" data-action="restart">Start over</button>
+              <button class="mas-btn" data-action="restart">Start over</button>
             </div>
           </div>
         </div>
