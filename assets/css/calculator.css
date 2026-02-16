@@ -219,7 +219,6 @@
 .m60-calculator-wrapper .form-control {
     border: 2px solid #E9ECEF;
     border-radius: 8px;
-    padding: 12px 16px;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -230,7 +229,6 @@
 }
 
 .m60-calculator-wrapper .form-control-lg {
-    padding: 16px 20px;
     font-size: 1.125rem;
 }
 
