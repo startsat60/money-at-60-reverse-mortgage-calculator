@@ -3,7 +3,7 @@
  * Plugin Name: Money at 60 Reverse Mortgage Calculator
  * Plugin URI: https://moneyat60.com.au
  * Description: Superior reverse mortgage calculator with multi-step interface, lead capture, and HubSpot integration
- * Version: 1.0.0
+ * Version: 0.1.1
  * Author: Money at 60
  * Author URI: https://moneyat60.com.au
  * License: GPL v2 or later
