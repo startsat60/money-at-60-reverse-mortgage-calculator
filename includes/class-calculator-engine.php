@@ -98,30 +98,30 @@ class M60_Calculator_Engine
 	 */
 	public function calculate($postcode, $property_value, $age_primary, $age_partner = null)
 	{
-		$status = $this->get_postcode_status($postcode);
+		// $status = $this->get_postcode_status($postcode);
 
-		if ($status === false) {
-			return array(
-				'error' => true,
-				'message' => 'Postcode not found. Please check and try again.'
-			);
-		}
+		// if ($status === false) {
+		// 	return array(
+		// 		'error' => true,
+		// 		'message' => 'Postcode not found. Please check and try again.'
+		// 	);
+		// }
 
-		if ($status === 'Ineligible') {
-			return array(
-				'error' => true,
-				'message' => 'Unfortunately, we do not currently lend in this postcode.'
-			);
-		}
+		// if ($status === 'Ineligible') {
+		// 	return array(
+		// 		'error' => true,
+		// 		'message' => 'Unfortunately, we do not currently lend in this postcode.'
+		// 	);
+		// }
 
-		if ($status === 'Refer') {
-			return array(
-				'error' => true,
-				'message' => 'Your postcode requires further review. Please contact us for more information.'
-			);
-		}
+		// if ($status === 'Refer') {
+		// 	return array(
+		// 		'error' => true,
+		// 		'message' => 'Your postcode requires further review. Please contact us for more information.'
+		// 	);
+		// }
 
-		$min_age = get_option('m60_calc_min_age', 60);
+		$min_age = get_option('m60_calc_min_age', 55);
 		//$max_age = get_option('m60_calc_max_age', 95);
 
 		if (
@@ -143,7 +143,7 @@ class M60_Calculator_Engine
 
 		// Get LVR based on youngest age
 		// $lvr = $this->get_lvr_by_age($calculation_age);
-		$lvr = $calculation_age - 40;
+		$lvr = min(($calculation_age - 40), 50);	// capped at 50
 
 		// Calculate maximum loan amount
 		$max_loan = $property_value * (0.01 * $lvr);
