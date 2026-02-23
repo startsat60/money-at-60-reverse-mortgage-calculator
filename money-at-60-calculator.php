@@ -162,7 +162,7 @@ class Money_At_60_Calculator
 		// Plugin CSS
 		wp_enqueue_style(
 			'm60-calculator-css',
-			M60_CALC_PLUGIN_URL . 'assets/css/calculator.css',
+			M60_CALC_PLUGIN_URL . 'assets/css/calculator.min.css',
 			array('bootstrap'),
 			M60_CALC_VERSION
 		);
@@ -170,7 +170,7 @@ class Money_At_60_Calculator
 		// Plugin JavaScript
 		wp_enqueue_script(
 			'm60-calculator-js',
-			M60_CALC_PLUGIN_URL . 'assets/js/calculator.js',
+			M60_CALC_PLUGIN_URL . 'assets/js/calculator.min.js',
 			array(),
 			M60_CALC_VERSION,
 			true
@@ -205,7 +205,7 @@ class Money_At_60_Calculator
 
 		wp_enqueue_style(
 			'm60-calculator-admin-css',
-			M60_CALC_PLUGIN_URL . 'assets/css/admin.css',
+			M60_CALC_PLUGIN_URL . 'assets/css/admin.min.css',
 			array(),
 			M60_CALC_VERSION
 		);
