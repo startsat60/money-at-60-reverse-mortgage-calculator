@@ -150,7 +150,7 @@ class M60_Calculator_Engine
 
 		// Apply minimum and maximum loan constraints
 		$min_loan = 10000;  // Minimum $10,000
-		$max_loan = min($max_loan, 500000);  // Cap at $500,000 (adjust as needed)
+		$max_loan = min($max_loan, 5000000);  // Cap at $5,000,000 (adjust as needed)
 
 		if ($max_loan < $min_loan) {
 			return array(
